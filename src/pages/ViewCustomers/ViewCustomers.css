@@ -1,0 +1,148 @@
+/* ViewCustomers.css */
+
+
+.view-customers-container {
+  width: 80%;
+  max-width: 800px;
+  height: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.customer-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.customer-card {
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease;
+}
+
+.customer-card:hover {
+  background-color: #86bdfc;
+}
+
+.customer-details{
+  display: flex;
+
+}
+
+.viewCustomer-col{
+  width: 50%;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.popup-content {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 650px; /* Limit the maximum width of the popup content */
+  width: 80%; 
+  animation: slideIn 0.3s forwards; 
+}
+
+.popup-content h2 {
+  margin-top: 10px; /* Remove top margin for heading */
+  margin-bottom: 20px; /* Add bottom margin for spacing */
+}
+
+.popup-content p {
+  margin: 10px 0; /* Add vertical margin for spacing */
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  display: flex;
+  font-size: 35px;
+  line-height: 14px;
+  border-top-right-radius: 5px;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #999999;
+  transition: background-color 0.3s;
+}
+
+.close:hover {
+  color: #ffffff;
+  background-color: #ff0000;
+  /* Red background on hover */
+}
+
+.ed-actions{
+   display: flex;
+   justify-content: center;
+  gap: 60px;
+ 
+}
+
+.edit-icon,
+.delete-icon {
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+.edit-icon:hover {
+  color: #007bff;
+}
+.delete-icon:hover{
+  color: red;
+}
+
+
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .customer-card {
+    width: calc(100% - 20px); /* Full width for mobile layout */
+  }
+}
